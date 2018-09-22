@@ -6,17 +6,16 @@ public class BinarySearch {
         int to = end;
         int currentIndex = (start + end) / 2;
 
-        if(values[0] == target){
+        if (values[0] == target) {
             return 0;
         }
         if (values[currentIndex] == target) {
             return currentIndex;
         }
-        if(values[start] >= values[values.length -1]) {
+        if (values[start] >= values[values.length - 1]) {
             if (target < values[start] || target > values[currentIndex]) {
                 from = start + 1;
-            }
-            else {
+            } else {
                 to = end - 1;
             }
         } else {

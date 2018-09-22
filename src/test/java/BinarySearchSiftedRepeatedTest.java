@@ -15,11 +15,11 @@ public class BinarySearchSiftedRepeatedTest {
 
     @Parameterized.Parameters
     public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][] {
-                { 5, 0 },   //0
-                { 1, 2 },   //1
-                { 3, 3 },   //2
-                { 4, 4 }}); //3
+        return Arrays.asList(new Object[][]{
+                {5, 0},   //0
+                {1, 2},   //1
+                {3, 3},   //2
+                {4, 4}}); //3
     }
 
     @Parameterized.Parameter(0)

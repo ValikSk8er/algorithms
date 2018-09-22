@@ -1,4 +1,3 @@
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -6,7 +5,8 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
+
 @RunWith(Parameterized.class)
 public class BinarySearchRegularTest {
 
@@ -14,9 +14,9 @@ public class BinarySearchRegularTest {
 
     @Parameterized.Parameters
     public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][] {
-                { 11, 5 }, { 1, 0 }, { 92, 18 },
-                { 15, 8 }, { 23, 11 }, { 7, 4 }, { 16, 9 } });
+        return Arrays.asList(new Object[][]{
+                {11, 5}, {1, 0}, {92, 18},
+                {15, 8}, {23, 11}, {7, 4}, {16, 9}});
     }
 
     @Parameterized.Parameter(0)
@@ -27,6 +27,6 @@ public class BinarySearchRegularTest {
 
     @Test
     public void testSortedArray() {
-        assertThat(BinarySearch.doBinarySearch(values, target, 0, values.length -1), is(expected));
+        assertThat(BinarySearch.doBinarySearch(values, target, 0, values.length - 1), is(expected));
     }
 }
